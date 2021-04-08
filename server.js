@@ -4,6 +4,9 @@ const app = express();
 const articleRouter = require('./routes/articles');
 const Article = require('./models/article')
 const methodOverride = require('method-override')
+const dotenv = require('dotenv')
+
+dotenv.config({path:'.env'});
 
 const DATABASE_URL = 'mongodb+srv://dango:dango123@cluster0.0lkqu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 
