@@ -5,7 +5,9 @@ const articleRouter = require('./routes/articles');
 const Article = require('./models/article')
 const methodOverride = require('method-override')
 
-mongoose.connect('mongodb+srv://dango:dango123@cluster0.0lkqu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{
+const DATABASE_URL = 'mongodb+srv://dango:dango123@cluster0.0lkqu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+
+mongoose.connect(DATABASE_URL,{
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 })
 
